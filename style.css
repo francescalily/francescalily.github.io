@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
+  
+
+
+html {
+    height: 100%;
+}
+
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    /* background-image: url(images/Screenshot\ 2021-06-23\ at\ 13.07.31.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+            
+    height: fit-content;
+    text-align: center; 
+}
+
+nav {
+    /* background-color: rgba(0, 0, 0, 0.4); gotten rid of box*/
+    
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: fixed;
+
+
+}
+
+main {
+    
+    /* height: 400px; */
+    text-align: center;
+    /* margin-top: 80px; */
+    /* padding-left: 240px;
+    padding-right: 240px; */
+    box-sizing: border-box;
+    width: fit-content;
+
+
+}
+
+footer {
+    
+    height: 100px;
+}
+
+h1 a{
+    
+    /** font-size: 14px;
+ /** font-family:Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: right;
+
+    text-decoration: none;
+    line-height: 175px; */
+
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 300px;
+    padding-right: 100px;
+    position: fixed;
+    display: inline-flex;
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
+    min-width: 200px;
+    
+    box-sizing: border-box;
+    float: right;
+
+
+
+
+}
+
+p {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.p5 {
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width: fit-content;
+    
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width: fit-content;
+
+}
