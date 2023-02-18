@@ -61,7 +61,7 @@ function draw() {
 
   background(255, 255, 255);
   translate(0, 50);
-  rotateX(map(mouseY, 110, height, PI/2, -PI/8));
+  rotateX(map(mouseY, 80, height, PI/2, -PI/8));
   noFill();
   stroke(0, 0, 0);
   
