@@ -4,42 +4,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Franki Callard</title>
-    
+    <script defer src="index.js"></script>
 </head>
 <body>
 
+    <div class="navbar">
+  <a class="franki-logo" href="../index.html">FRANKI CALLARD</a>
+  <div class="dropdown">
+    <button class="dropbtn">WORK
+    </button>
+    <div class="dropdown-content">
+    <a href="javascript:void(0);" onclick="showContent('generative-art')">Generative Art</a>
+    <a href="javascript:void(0);" onclick="showContent('websites')">Websites</a>
+    <a href="javascript:void(0);" onclick="showContent('touch-designer')">Touch Designer</a>
+</div>
 
-    <div class="container">
+  </div>
+  <a href="#news">CONTACT</a>
+</div>
 
-        <nav>
+<div class="content-section" id="generative-art">Generative Art Content</div>
+<div class="content-section" id="websites">Website Content</div>
+<div class="content-section" id="touch-designer">Touch Designer Content</div>
 
-            <a href="index.html"><strong>FRANKI CALLARD</strong></a>
 
+<div id="p5-sketch">
+    <main>
+        
+        <script defer src="/sketch.js"></script>
             
-             <a href="../Work/workTwo.html">WORK</a>
+    </main>
+</div>
 
-            <a href="/Home/indexTwo.html">CONTACT</a>
-
-        </nav>
- 
-        <main>
-            <section class="p5">
-                <script defer src="/sketch.js"></script>
-            </section>
-            
-        </main>
-
-    
-        <footer>
-           
-        </footer>
-
-    </div>
 
 </body>
 </html>

@@ -14,6 +14,8 @@ var high;
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+  
+  
   w = width;
   h = height;
   cols = w / scl;
@@ -22,6 +24,7 @@ function setup() {
   
 
   video = createCapture(VIDEO);
+  video.id('myCapture');
 
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
@@ -32,6 +35,7 @@ function setup() {
 }
 
 function draw() {
+  
   video.size(w / scl, h / scl);
   background(0);
 

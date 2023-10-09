@@ -2,8 +2,89 @@ html, body {
     margin: 0;
     padding-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    
-  }
+}
+
+.franki-logo {
+    font-weight: 900;
+}
+.navbar {
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: crosshair;
+  cursor: crosshair;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  padding-top: 14px;
+  padding-right: 40px;
+  padding-left: 40px;
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+
+  text-decoration: none;
+  cursor: crosshair;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  cursor: crosshair;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+ 
+  cursor: crosshair;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   canvas {
     display: block;
   }
@@ -15,7 +96,6 @@ html {
 }
 
 
-
 body {
     background-color: rgb(255, 255, 255);
     background-size: cover;
@@ -23,24 +103,6 @@ body {
     background-position: center;
 }
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header {
-            
-    height: fit-content;
-    text-align: center; 
-}
-
-nav {
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    position: fixed;
-    cursor: crosshair;
-}
 
 main {
     text-align: center;
@@ -48,48 +110,6 @@ main {
     width: fit-content;
 }
 
-footer {
-    
-    height: 100px;
-}
-
-h1 a{
-
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 300px;
-    padding-right: 100px;
-    position: fixed;
-    display: inline-flex;
-    text-decoration: none;
-    height: fit-content;
-    width: fit-content;
-    min-width: 200px;
-    box-sizing: border-box;
-
-}
-
-p {
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-}
-
-a {
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 16px;
-    padding-left: 40px;
-    padding-right: 40px;
-    position: static;
-    cursor: crosshair;
-}
 
 .p5 {
     margin-left: auto;
@@ -99,29 +119,6 @@ nav a {
     
 }
 
-section {
-    margin-left: auto;
-    margin-right: auto;
-    height: fit-content;
-    width: fit-content;
-
-}
-
-.work {
-
-    position: static;
-    padding-top: 100px;
-
-}
-
-.work a {
-    font-size: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    padding-left: 40px;
-    padding-right: 40px;
-    position: static;
-}
 
 
 .instagram-button {
@@ -151,8 +148,11 @@ section {
     }
 }
 
+.content-section {
+    display: none;
+}
 
-.buttons {
-    margin-left: 40px;
-    margin-top: 100px; 
+#myCapture {
+    position: absolute;
+    top: -10000px;
 }
