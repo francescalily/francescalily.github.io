@@ -196,3 +196,12 @@ h2.email a:hover {
   color: grey;
   text-decoration: none;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 97%;
+  color: grey;
+  text-align: right;
+}
