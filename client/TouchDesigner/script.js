@@ -28,7 +28,7 @@ const scene = new THREE.Scene();
  */
 const cube = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial({ color: "#ff0000" })
+  new THREE.MeshBasicMaterial({ color: "rgb(69, 248, 14)" })
 );
 scene.add(cube);
 
@@ -72,6 +72,7 @@ scene.add(camera);
  */
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
+  alpha: true,
 });
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 renderer.setSize(sizes.width, sizes.height);
