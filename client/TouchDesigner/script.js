@@ -26,10 +26,13 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
+const loader = new THREE.ImageLoader();
 
 const textureLoader = new THREE.TextureLoader();
 const gradientTexture = textureLoader.load("../assets/static/ny.jpg");
 gradientTexture.magFilter = THREE.NearestFilter;
+const boxTexture = new THREE.TextureLoader().load("../assets/static/ny.jpg");
+const boxMaterial = new THREE.MeshBasicMaterial({ map: boxTexture });
 
 /**
  * Test cube
@@ -40,6 +43,24 @@ gradientTexture.magFilter = THREE.NearestFilter;
 // );
 // scene.add(cube);
 
+// loader.load(
+//   "../assets/websites/jobBoardScreenshot.png",
+//   function (image) {
+//     // use the image, e.g. draw part of it on a canvas
+//     const canvas = document.createElement("canvas");
+//     const context = canvas.getContext("2d");
+//     context.drawImage(image, 100, 100);
+//   },
+
+//   // onProgress callback currently not supported
+//   undefined,
+
+//   // onError callback
+//   function () {
+//     console.error("An error happened.");
+//   }
+// );
+
 const material = new THREE.MeshToonMaterial({
   color: parameters.materialColor,
   gradientMap: gradientTexture,
@@ -47,9 +68,9 @@ const material = new THREE.MeshToonMaterial({
 
 const objectsDistance = 4;
 
-const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.4, 16, 60), material);
+const mesh1 = new THREE.Mesh(new THREE.BoxGeometry(1.7, 1.7, 1.7), boxMaterial);
 
-const mesh2 = new THREE.Mesh(new THREE.ConeGeometry(1, 2, 32), material);
+const mesh2 = new THREE.Mesh(new THREE.ConeGeometry(1, 2, 32), boxMaterial);
 
 const mesh3 = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
@@ -185,8 +206,6 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
   const deltaTime = elapsedTime - previousTime;
   previousTime = elapsedTime;
-
-  console.log(deltaTime);
 
   //animating the camera
   camera.position.y = (-scrollY / sizes.height) * objectsDistance;
