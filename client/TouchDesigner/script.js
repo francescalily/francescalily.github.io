@@ -25,6 +25,10 @@ const canvas = document.querySelector("canvas.webgl");
 // Scene
 const scene = new THREE.Scene();
 
+const textureLoader = new THREE.TextureLoader();
+const gradientTexture = textureLoader.load("../assets/static/ny.jpg");
+gradientTexture.magFilter = THREE.NearestFilter;
+
 /**
  * Test cube
  */
@@ -36,6 +40,7 @@ const scene = new THREE.Scene();
 
 const material = new THREE.MeshToonMaterial({
   color: parameters.materialColor,
+  gradientMap: gradientTexture,
 });
 
 const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.4, 16, 60), material);
@@ -95,7 +100,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
+renderer.setClearAlpha(0);
 /**
  * Animate
  */
