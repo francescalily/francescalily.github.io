@@ -14,6 +14,7 @@ const parameters = {
 
 gui.addColor(parameters, "materialColor").onChange(() => {
   material.color.set(parameters.materialColor);
+  particlesMaterial.color.set(parameters.materialColor);
 });
 
 /**
@@ -64,6 +65,32 @@ mesh3.position.x = -1.7;
 scene.add(mesh1, mesh2, mesh3);
 
 const sectionMeshes = [mesh1, mesh2, mesh3];
+
+const particlesCount = 3000;
+const positions = new Float32Array(particlesCount * 3);
+
+for (let i = 0; i < particlesCount; i++) {
+  positions[i * 3 + 0] = (Math.random() - 0.5) * 10;
+  positions[i * 3 + 1] =
+    objectsDistance * 0.5 -
+    Math.random() * objectsDistance * sectionMeshes.length;
+  positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+}
+
+const particlesGeometry = new THREE.BufferGeometry();
+particlesGeometry.setAttribute(
+  "position",
+  new THREE.BufferAttribute(positions, 3)
+);
+
+const particlesMaterial = new THREE.PointsMaterial({
+  color: 0x000000,
+  sizeAttenuation: true,
+  size: 0.03,
+});
+
+const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+scene.add(particles);
 
 const directionalLight = new THREE.DirectionalLight("#ffffff", 1);
 directionalLight.position.set(1, 1, 0);
@@ -151,8 +178,8 @@ const tick = () => {
   //animating the camera
   camera.position.y = (-scrollY / sizes.height) * objectsDistance;
 
-  const parallaxX = -cursor.x;
-  const parallaxY = cursor.y;
+  const parallaxX = -cursor.x * 0.5;
+  const parallaxY = cursor.y * 0.5;
   cameraGroup.position.x +=
     (parallaxX - cameraGroup.position.x) * 5 * deltaTime;
   cameraGroup.position.y +=
