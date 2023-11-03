@@ -156,6 +156,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-image 1s;
   overflow: hidden;
 }
 

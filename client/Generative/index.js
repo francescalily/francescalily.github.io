@@ -1,7 +1,7 @@
 const images = [
-  "url(../assets/static/ball.png)",
+  "url(../assets/static/h20.jpeg)",
   "url(../assets/static/ny.jpg)",
-  "url(../assets/static/ant.png)",
+  "url(../assets/static/facegen.png)",
   "url(../assets/static/textureOne.png)",
 ];
 
