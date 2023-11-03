@@ -14,11 +14,15 @@ html {
     height: 100%;
 }
 
+#myCapture {
+  position: absolute;
+  top: -10000px;
+}
+
 
 
 body {
     background-color: rgb(255, 255, 255);
-    /* background-image: url(images/Screenshot\ 2021-06-23\ at\ 13.07.31.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,52 +33,35 @@ body {
     margin-right: auto;
 }
 
-header {
-            
+header {    
     height: fit-content;
     text-align: center; 
 }
 
 nav {
-    /* background-color: rgba(0, 0, 0, 0.4); gotten rid of box*/
-    
     text-align: center;
     padding-top: 14px;
     padding-bottom: 14px;
     position: fixed;
     cursor: crosshair;
-
-
 }
 
 main {
-    
-    /* height: 400px; */
     text-align: center;
-    /* margin-top: 80px; */
-    /* padding-left: 240px;
-    padding-right: 240px; */
+    padding-right: 240px; 
     box-sizing: border-box;
     width: fit-content;
-
-
 }
 
 footer {
-    
     height: 100px;
 }
 
 h1 a{
-    
-    /** font-size: 14px;
- /** font-family:Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     text-align: right;
-
     text-decoration: none;
-    line-height: 175px; */
-
+    line-height: 175px; 
     text-align: center;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -89,10 +76,6 @@ h1 a{
     
     box-sizing: border-box;
     float: right;
-
-
-
-
 }
 
 p {
@@ -103,8 +86,7 @@ p {
 a {
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    
+    font-size: 24px;   
 }
 
 nav a {
@@ -162,11 +144,8 @@ button {
     width: 100px;
   height: 100px;
   background: rgb(69, 248, 14);
-  
   transition: width 2s;
     
- 
-
 }
 button:hover {
     width: 300px;
