@@ -83,17 +83,21 @@ html {
   display: block;
 }
 
-.image-container {
+#imageContainer {
+  border: solid red 4px;
   position: absolute;
   top: 55px;
-  left: 0;
   width: 100vw;
-  height: calc(100vh - 10px);
+  height: 100vh;
   background-size: cover;
   background-position: center;
   transition: background-image 1s;
   z-index: 1;
 }
+/* .image-container {
+  width: 20%;
+  height: 80%;
+} */
 
 .footer {
   position: fixed;

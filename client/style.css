@@ -154,6 +154,8 @@ main {
   border-radius: 30px;
   padding: 10px;
   text-align: center;
+  height: 800px;
+  object-fit: cotain;
 }
 
 .image {
