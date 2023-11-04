@@ -127,7 +127,7 @@ body {
   overflow: hidden;
 }
 
-button {
+.see-more-generative {
   border: none;
   color: black;
   /* padding: 15px 32px; */
@@ -142,7 +142,7 @@ button {
   background: rgb(69, 248, 14);
   transition: width 2s;
 }
-button:hover {
+.see-more-generative:hover {
   width: 200px;
   scroll-behavior: smooth;
 }
