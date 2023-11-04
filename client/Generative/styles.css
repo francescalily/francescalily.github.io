@@ -127,6 +127,26 @@ body {
   overflow: hidden;
 }
 
+button {
+  border: none;
+  color: black;
+  /* padding: 15px 32px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  /* margin: 200px 2px; */
+  cursor: crosshair;
+  width: 90px;
+  height: 40px;
+  background: rgb(69, 248, 14);
+  transition: width 2s;
+}
+button:hover {
+  width: 200px;
+  scroll-behavior: smooth;
+}
+
 .footer {
   position: fixed;
   left: 0;
