@@ -68,9 +68,9 @@ const material = new THREE.MeshToonMaterial({
 
 const objectsDistance = 4;
 
-const mesh1 = new THREE.Mesh(new THREE.BoxGeometry(1.7, 1.7, 1.7), boxMaterial);
+const mesh1 = new THREE.Mesh(new THREE.BoxGeometry(1.7, 1.7, 1.7), material);
 
-const mesh2 = new THREE.Mesh(new THREE.ConeGeometry(1, 2, 32), boxMaterial);
+const mesh2 = new THREE.Mesh(new THREE.TorusGeometry(1, 3, 2, 100), material);
 
 const mesh3 = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
@@ -84,11 +84,12 @@ mesh1.position.y = -objectsDistance * 2;
 mesh1.position.x = -1.7;
 mesh2.position.x = 1.7;
 mesh3.position.x = -1.7;
-scene.add(mesh1, mesh2, mesh3);
+// scene.add(mesh1, mesh2, mesh3);
+scene.add(mesh2);
 
 const sectionMeshes = [mesh1, mesh2, mesh3];
 
-const particlesCount = 3000;
+const particlesCount = 0;
 const positions = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount; i++) {
@@ -108,7 +109,7 @@ particlesGeometry.setAttribute(
 const particlesMaterial = new THREE.PointsMaterial({
   color: 0x000000,
   sizeAttenuation: true,
-  size: 0.03,
+  size: 0.02,
 });
 
 const particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -182,7 +183,7 @@ window.addEventListener("scroll", () => {
       duration: 1.5,
       ease: "power2.inOut",
       x: "+=6",
-      y: "+=3",
+      y: "+=1",
       z: "+=1.5",
     });
   }
