@@ -93,7 +93,7 @@ const particlesCount = 0;
 const positions = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount; i++) {
-  positions[i * 3 + 0] = (Math.random() - 0.5) * 10;
+  positions[i * 1 + 0] = (Math.random() - 0.5) * 10;
   positions[i * 3 + 1] =
     objectsDistance * 0.5 -
     Math.random() * objectsDistance * sectionMeshes.length;

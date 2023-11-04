@@ -134,7 +134,7 @@ h2.email a:hover {
 .section {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
