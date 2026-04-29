@@ -1,0 +1,11 @@
+/* franki this is the whole page for the buttons and the header */
+
+.logo {
+  position: absolute;
+  width: 40%;
+  margin-top: 20px;
+
+}
+.header {
+  color: white;
+}
