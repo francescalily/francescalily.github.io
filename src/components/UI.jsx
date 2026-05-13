@@ -50,34 +50,28 @@ export const UI = () => {
 
   return (
     <>
-      <main className=" pointer-events-none select-none z-100 fixed  inset-0  flex justify-between flex-col">
-        <a
-          className="pointer-events-auto "
-          // href="https://lessons.wawasensei.dev/courses/react-three-fiber"
-        >
+      <main className={styles.main}>
+        <div className={styles.contact}>
+          <p>INSTAGRAM</p>
+          <p>LINKEDIN</p>
+          <p>ABOUT</p>
+        </div>
+        <a className={styles.logoLink}>
           <img className={styles.logo} src="/images/furdak2.png" />
         </a>
-        <div className="w-full overflow-auto pointer-events-auto flex justify-center">
-          <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
+        <div className={styles.navWrapper}>
+          <div className={styles.navScroll}>
             {[...pages].map((_, index) => (
               <button
                 key={index}
-                className={`border-transparent hover:border-white transition-all duration-300  px-4 py-3 rounded-full  text-lg uppercase shrink-0 border ${
-                  index === page
-                    ? "bg-white/90 text-black"
-                    : "bg-black/30 text-white"
-                }`}
+                className={`${styles.pageButton} ${index === page ? styles.pageButtonActive : styles.pageButtonInactive}`}
                 onClick={() => setPage(index)}
               >
                 {index === 0 ? "Cover" : `Page ${index}`}
               </button>
             ))}
             <button
-              className={`border-transparent hover:border-white transition-all duration-300  px-4 py-3 rounded-full  text-lg uppercase shrink-0 border ${
-                page === pages.length
-                  ? "bg-white/90 text-black"
-                  : "bg-black/30 text-white"
-              }`}
+              className={`${styles.pageButton} ${page === pages.length ? styles.pageButtonActive : styles.pageButtonInactive}`}
               onClick={() => setPage(pages.length)}
             >
               Back Cover
@@ -86,61 +80,9 @@ export const UI = () => {
         </div>
       </main>
 
-      <div className="fixed inset-0 flex items-center -rotate-2 select-none">
-        <div className="relative">
-        {/* franki note this is where the text would be scrolling across the screen */}
-          {/* <div className="bg-white/0  animate-horizontal-scroll flex items-center gap-8 w-max px-8">
-            <h1 className="shrink-0 text-white text-10xl font-black ">
-              furdakfurdak
-            </h1>
-            <h2 className="shrink-0 text-white text-8xl italic font-light">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-9xl font-extralight italic">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
-              furdakfurdakfurdakfurdak
-            </h2>
-          </div>
-          <div className="absolute top-0 left-0 bg-white/0 animate-horizontal-scroll-2 flex items-center gap-8 px-8 w-max">
-            <h1 className="shrink-0 text-white text-10xl font-black ">
-              furdakfurdak
-            </h1>
-            <h2 className="shrink-0 text-white text-8xl italic font-light">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-9xl font-extralight italic">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">
-              furdakfurdak
-            </h2>
-            <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
-              furdakfurdak
-            </h2>
-          </div> */}
+      <div className={styles.scrollTextContainer}>
+        <div className={styles.scrollTextInner}>
+          {/* slanted text section */}
         </div>
       </div>
     </>
