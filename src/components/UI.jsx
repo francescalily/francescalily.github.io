@@ -13,12 +13,6 @@ const pictures = [
   "DSC01071",
   "DSC01103",
   "DSC01145",
-  "DSC01420",
-  "DSC01461",
-  "DSC01489",
-  "DSC02031",
-  "DSC02064",
-  "DSC02069",
 ];
 
 export const pageAtom = atom(0);
@@ -52,9 +46,8 @@ export const UI = () => {
     <>
       <main className={styles.main}>
         <div className={styles.contact}>
-          <p>INSTAGRAM</p>
-          <p>LINKEDIN</p>
-          <p>ABOUT</p>
+          <a href="https://www.instagram.com/furdakfurdak/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <a href="https://www.linkedin.com/in/francesca-callard-4a1816206" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
         </div>
         <a className={styles.logoLink}>
           <img className={styles.logo} src="/images/furdak2.png" />

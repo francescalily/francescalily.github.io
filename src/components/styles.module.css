@@ -83,6 +83,8 @@
   gap: 16px;
   font-size: 16px;
   padding: 24px;
+  pointer-events: all;
+  cursor: crosshair;
 }
 
 @media (max-width: 768px) {
