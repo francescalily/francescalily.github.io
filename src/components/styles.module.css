@@ -44,25 +44,45 @@
 }
 
 .pageButton {
-  /* border: 1px solid transparent; */
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
   font-size: 16px;
   text-transform: uppercase;
   flex-shrink: 0;
-  transition: border-color 0.3s;
   cursor: crosshair;
+  
+  /* Liquid glass core */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  
+  /* Depth & shine */
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  
+  padding: 8px 18px;
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .pageButton:hover {
-  border-color: white;
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .pageButtonActive {
   color: #CA2B3B;
+  border-color: rgba(202, 43, 59, 0.4);
+  box-shadow:
+    0 2px 8px rgba(202, 43, 59, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .pageButtonInactive {
-  color: black;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .scrollTextContainer {
@@ -87,8 +107,88 @@
   cursor: crosshair;
 }
 
+.contact a {
+  /* Liquid glass core */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+  /* Shape & text */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: crosshair;
+
+  /* Depth & shine */
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.contact a:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
 @media (max-width: 768px) {
+  .navWrapper {
+    justify-content: flex-start;
+  }
+
+  .navScroll {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 6px;
+    padding: 12px;
+    overflow: visible;
+  }
+
   .pageButton {
-    font-size: 12px;
+    font-size: 16px;
+    padding: 4px 10px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .pageButton:hover {
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .contact a {
+    font-size: 16px;
+    padding: 4px 10px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .contact a:hover {
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
   }
 }
